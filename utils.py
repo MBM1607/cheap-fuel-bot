@@ -22,7 +22,7 @@ def fetch_prices(text: str) -> str:
         for price in regional_prices:
             prices.append("")
             prices.append(f"Type: {price['type']}")
-            prices.append(f"**Price: {price['price']}**")
+            prices.append(f"<b>Price: {price['price']}</b>")
             prices.append(f"Name: {price['name']}")
             prices.append(f"Suburb: {price['suburb']}")
             prices.append(
