@@ -26,7 +26,7 @@ def respond():
     text = update.message.text.encode("utf-8").decode()
 
     # the first time you chat with the bot AKA the welcoming message
-    send_message(config.WELCOME_MESSAGE if text == "/start" else fetch_prices(text))
+    send_message(config.WELCOME_MESSAGE if text in ["/start", "/help"] else fetch_prices(text))
 
     return "ok"
 
