@@ -6,6 +6,8 @@ import config
 
 
 def fetch_prices(text: str) -> str:
+    text = config.REGIONS[int(text) - 1] if text.isdigit() else text.upper()
+
     if text not in config.REGIONS:
         return "There was a problem in the name you used, please enter different name"
 
@@ -14,7 +16,7 @@ def fetch_prices(text: str) -> str:
     if response.ok:
         json = response.json()
         regional_prices = [
-            item["prices"] for item in json["regions"] if item["region"] == text
+            item["prices"] for item in json["regions"] if item["region"].upper() == text
         ][0]
 
         prices = [f"Lowest Prices for {text}"]

@@ -18,6 +18,6 @@ Please enter one of the regional options below to fetch the prices.
 4. QLD
 5. WA
 """
-REGIONS = ["All", "VIC", "NSW", "QLD", "WA"]
+REGIONS = ["ALL", "VIC", "NSW", "QLD", "WA"]
 
 API_URL = "https://projectzerothree.info/api.php?format=json"
