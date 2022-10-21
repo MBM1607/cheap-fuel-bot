@@ -19,6 +19,7 @@ def respond():
             chat_id=update.message.chat.id,
             text=text,
             reply_to_message_id=update.message.message_id,
+            parse_mode=telegram.ParseMode.MARKDOWN_V2,
         )
 
     # Telegram understands UTF-8, so encode text for unicode compatibility
