@@ -33,6 +33,7 @@ def fetch_prices(text: str) -> str:
                 prices.append(
                     f"Location: https://maps.google.com/?q={price['lat']},{price['lng']}"
                 )
+                prices.append("Powered by Ummar")
                 prices.append("")
 
             prices.append(
