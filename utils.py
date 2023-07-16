@@ -33,12 +33,12 @@ def fetch_prices(text: str) -> str:
                 prices.append(
                     f"Location: https://maps.google.com/?q={price['lat']},{price['lng']}"
                 )
-                prices.append("Powered by Ummar")
                 prices.append("")
 
             prices.append(
                 f"Last Updated at: {datetime.fromtimestamp(json['updated']).isoformat(sep=' ')}"
             )
+            prices.append("Powered by Ummar")
 
             return "\n".join(prices)
         else:
