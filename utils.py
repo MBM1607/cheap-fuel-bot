@@ -38,7 +38,7 @@ def fetch_prices(text: str) -> str:
             prices.append(
                 f"Last Updated at: {datetime.fromtimestamp(json['updated']).isoformat(sep=' ')}"
             )
-            prices.append("Powered by Ummar")
+            prices.append("Powered by @darthvader1410")
 
             return "\n".join(prices)
         else:
